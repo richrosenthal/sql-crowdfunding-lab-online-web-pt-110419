@@ -51,5 +51,6 @@ def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_b
   FROM projects
   JOIN pledges ON projects.id = pledges.project_id
   GROUP BY projects.category
-  ORDER BY SUM(pledges.amount) ASC"
+  ORDER BY SUM(pledges.amount) ASC
+  LIMIT 1"
 end
